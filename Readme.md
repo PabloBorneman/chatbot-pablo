@@ -2,6 +2,12 @@
 
 This project sets up a simple chatbot API using OpenAI's GPT-3.5 Turbo model, integrated with an Express.js server. The API accepts user input, sends it to OpenAI for processing, and returns the generated response.
 
+# Chatbot API using OpenAI and Express
+
+<img src="public/chat comletion ui.PNG" />
+
+This project sets up a simple chatbot API using OpenAI's GPT-3.5 Turbo model, integrated with an Express.js server. The API accepts user input, sends it to OpenAI for processing, and returns the generated response.
+
 ## Features
 
 - Simple Express server setup
