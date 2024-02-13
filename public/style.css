@@ -1,0 +1,233 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #1f2d3d; /* Dark blue background */
+  color: #fff; /* White text color */
+}
+.container {
+  width: 100%; /* Full width */
+  max-width: 700px; /* Max container width */
+ 
+}
+#chatContainer {
+  margin: 0;
+  padding: 10px;
+  height: 80vh; /* 80% of viewport height */
+  overflow-y: auto;
+  background-color: #2c3e50; /* Slightly lighter blue background for the chat container */
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+  /* Custom scrollbar styles */
+  scrollbar-width: thin;
+  scrollbar-color: #2c3e50 #2c3e50;
+  margin-top: 2rem;
+}
+/* For Webkit browsers */
+#chatContainer::-webkit-scrollbar {
+  width: 12px;
+}
+#chatContainer::-webkit-scrollbar-track {
+  background: #2c3e50;
+}
+#chatContainer::-webkit-scrollbar-thumb {
+  background-color: #2c3e50;
+  border-radius: 20px;
+  border: 3px solid #2c3e50;
+}
+.message {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 20px; /* More rounded corners for messages */
+  display: block; /* Block display to stack messages */
+  max-width: 80%; /* Making sure messages don't take full width */
+}
+.user {
+  background-color: #343a40;
+  text-align: left;
+}
+.bot {
+  text-align: left; /* Align bot messages to the left */
+}
+
+pre {
+  font-family: "Courier New", monospace;
+  background: #333;
+  color: #9df96e !important;
+  padding: 5px;
+  border-radius: 5px;
+  display: block;
+  white-space: pre-wrap;
+}
+.input-group {
+  margin-top: 10px;
+}
+.form-control,
+.btn-primary {
+  border-radius: 4px;
+}
+.btn-primary {
+  background-color: #5cb85c; /* Bootstrap success color for the send button */
+  border: none;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #4cae4c; /* Darken button on hover/focus */
+}
+#placeholderCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem; /* Adjusted for spacing */
+}
+
+.card {
+  cursor: pointer;
+  background-color: transparent; /* No background color */
+  border: 2px solid #fff; /* White border */
+  color: #fff; /* White text color */
+  flex: 0 1 calc(33.333% - 1rem); /* Equal width, accounting for the gap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Equal height */
+  margin-bottom: 1rem;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slight background on hover */
+}
+
+.card-body {
+  text-align: center;
+  padding: 1rem; /* Padding for the content */
+}
+
+.help-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  width: 100%; /* Full width to center the text */
+}
+
+/* This ensures the cards do not become too narrow on smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 1 calc(50% - 1rem); /* Half width on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 0 1 100%; /* Full width on very small screens */
+  }
+}
+.card-text {
+  color: #fff;
+}
+
+.help-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+.typing-indicator {
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  vertical-align: bottom;
+  margin: 10px 0;
+  padding: 10px 20px;
+
+  color: #9df96e;
+  font-family: "Courier New", monospace;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.typing-indicator::after {
+  content: "|";
+  font-weight: bold;
+  animation: blink 1s step-start infinite;
+}
+
+.typing-content {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.1em solid #9df96e;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  animation: typing 2s steps(20, end) infinite;
+}
+
+.hero-section {
+    
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subheading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .chat-container {
+    background-color: #2c3e50;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem; /* Overlap hero-section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
