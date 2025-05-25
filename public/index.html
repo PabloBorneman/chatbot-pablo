@@ -27,7 +27,7 @@
           <div class="container">
             <h2 class="mb-2">Conocé a:</h2>
             <h1 class="hero-heading">Pablo Guillermo</h1>
-             <h1 class="hero-heading">Ibarra Borneman</h1>
+            <h1 class="hero-heading">Ibarra Borneman</h1>
             <h5 class="text-muted mb-3">Analista Programador Universitario</h5>
             <img
               src="foto-pablo.jpg"
@@ -41,37 +41,27 @@
           </div>
         </div>
 
-        <div id="placeholderCards">
-          <!-- Primera tarjeta -->
-          <div
-            class="card mb-3 text-white bg-dark"
-            onclick="sendPlaceholder('¿Quién es Pablo Borneman?')"
-          >
-            <div class="card-body">
+        <!-- Tarjetas adaptables -->
+        <div id="placeholderCards" class="d-flex flex-column align-items-center px-2">
+          <div class="card text-white bg-dark mb-3 w-100" style="max-width: 500px;" onclick="sendPlaceholder('¿Quién es Pablo Borneman?')">
+            <div class="card-body text-center">
               ¿Quién es Pablo Borneman?
             </div>
           </div>
-          <!-- Segunda tarjeta -->
-          <div
-            class="card text-white bg-dark mb-3"
-            onclick="sendPlaceholder('¿Qué experiencia tiene en inteligencia artificial?')"
-          >
-            <div class="card-body">
+          <div class="card text-white bg-dark mb-3 w-100" style="max-width: 500px;" onclick="sendPlaceholder('¿Qué experiencia tiene en inteligencia artificial?')">
+            <div class="card-body text-center">
               ¿Qué experiencia tiene en inteligencia artificial?
             </div>
           </div>
-          <!-- Tercera tarjeta -->
-          <div
-            class="card text-white bg-dark mb-3"
-            onclick="sendPlaceholder('¿Dónde estudió y qué tecnologías domina?')"
-          >
-            <div class="card-body">
+          <div class="card text-white bg-dark mb-3 w-100" style="max-width: 500px;" onclick="sendPlaceholder('¿Dónde estudió y qué tecnologías domina?')">
+            <div class="card-body text-center">
               ¿Dónde estudió y qué tecnologías domina?
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Input -->
       <div class="input-group">
         <input
           type="text"
@@ -91,9 +81,8 @@
       </div>
     </div>
 
+    <!-- JS -->
     <script src="app.js"></script>
-
-    <!-- Bootstrap JS y dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
