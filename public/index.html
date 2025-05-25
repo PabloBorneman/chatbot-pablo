@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatbot Interface</title>
+    <title>Asistente de Pablo Borneman</title>
+
     <!-- Bootstrap CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -18,56 +19,65 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container chat-container">
       <div id="chatContainer">
-        <div class="hero-section">
+        <div class="hero-section text-center py-4">
           <div class="container">
-            <h1 class="hero-heading">Welcome to ChatGPT</h1>
+            <h2 class="mb-2">Conocé a:</h2>
+            <h1 class="hero-heading">Pablo Guillermo</h1>
+             <h1 class="hero-heading">Ibarra Borneman</h1>
+            <h5 class="text-muted mb-3">Analista Programador Universitario</h5>
+            <img
+              src="foto-pablo.jpg"
+              alt="Foto de Pablo Guillermo Ibarra Borneman"
+              class="rounded-circle mb-4"
+              style="width: 180px; height: 180px; object-fit: cover; border: 3px solid #444"
+            />
             <p class="hero-subheading">
-              Your AI-powered assistant is here to help you 24/7.
+              Un asistente personalizado que responde sobre su experiencia profesional, estudios, proyectos en inteligencia artificial y más.
             </p>
           </div>
         </div>
 
         <div id="placeholderCards">
-          <!-- First card -->
+          <!-- Primera tarjeta -->
           <div
-            class="card mb-3 text-white bg-dark mb-3"
-            onclick="sendPlaceholder('Come up with concepts for a retro-style arcade game')"
+            class="card mb-3 text-white bg-dark"
+            onclick="sendPlaceholder('¿Quién es Pablo Borneman?')"
           >
             <div class="card-body">
-              Come up with concepts for a retro-style arcade game
+              ¿Quién es Pablo Borneman?
             </div>
           </div>
-          <!-- Second card -->
+          <!-- Segunda tarjeta -->
           <div
             class="card text-white bg-dark mb-3"
-            onclick="sendPlaceholder('Compare business strategies for transitioning from budget to luxury vs. luxury to budget')"
+            onclick="sendPlaceholder('¿Qué experiencia tiene en inteligencia artificial?')"
           >
             <div class="card-body">
-              Compare business strategies for transitioning from budget to
-              luxury vs. luxury to budget
+              ¿Qué experiencia tiene en inteligencia artificial?
             </div>
           </div>
-          <!-- Third card (newly added) -->
+          <!-- Tercera tarjeta -->
           <div
             class="card text-white bg-dark mb-3"
-            onclick="sendPlaceholder('Suggest some codenames for a project introducing flexible work arrangements')"
+            onclick="sendPlaceholder('¿Dónde estudió y qué tecnologías domina?')"
           >
             <div class="card-body">
-              Suggest some codenames for a project introducing flexible work
-              arrangements
+              ¿Dónde estudió y qué tecnologías domina?
             </div>
           </div>
         </div>
       </div>
+
       <div class="input-group">
         <input
           type="text"
           id="userInput"
           class="form-control"
-          placeholder="Type your message here..."
+          placeholder="Escribí tu pregunta sobre Pablo..."
         />
         <div class="input-group-append">
           <button
@@ -83,7 +93,7 @@
 
     <script src="app.js"></script>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- Bootstrap JS y dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
